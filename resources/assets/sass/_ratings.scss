@@ -1,0 +1,29 @@
+$star-width: 50px;
+
+.rating {
+  position: relative;
+  width: $star-width * 5;
+
+  .rating-row-empty, .rating-row-full, .rating-row-hover {
+    width: 100%;
+    height: $star-width;
+    background-repeat: repeat;
+    background-position: 0 0;
+    background-size: $star-width $star-width;
+    position: absolute;
+    top: 0;
+    cursor: pointer;
+  }
+
+  .rating-row-empty{
+    background-image: url("/images/star-empty.png");
+    position: relative;
+  }
+  .rating-row-full {
+    background-image: url("/images/star-full.png");
+  }
+  .rating-row-hover {
+    width: 0;
+    background-image: url("/images/star-hover.png");
+  }
+}
